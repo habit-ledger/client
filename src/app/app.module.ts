@@ -8,9 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
