@@ -39,6 +39,9 @@ export class LoginComponent implements OnInit {
     this.dataSubject.next({ mode: 'register' });
   }
 
+  /**
+   * Switch between the Login and the Registration modes
+   */
   public switchMode(mode: LoginMode): void {
     this.data$.pipe(first())
       .subscribe(a => this.dataSubject.next({ ... a, mode }));
