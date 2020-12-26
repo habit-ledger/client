@@ -3,9 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./views/login/login.module').then(m => m.LoginModule),
   },
+  { path: '**', redirectTo: 'login' },
 ];
 
 @NgModule({

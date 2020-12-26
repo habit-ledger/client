@@ -1,1 +1,45 @@
-Login View works!
+<article class="login-view" *ngIf="data$ | async as data">
+
+  <!-- Main body of the component -->
+  <section class="login-items">
+    <form class="login-details" [formGroup]="form">
+
+      <!-- Email field -->
+      <mat-form-field>
+        <mat-label>Email Address</mat-label>
+        <input class="email-address"
+               type="email"
+               placeholder="you@example.com"
+               autocomplete="email"
+               matInput
+               >
+      </mat-form-field>
+
+      <!-- Password Field -->
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input class="password"
+               type="email"
+               placeholder="Secure Password"
+               autocomplete="current-password"
+               matInput
+               >
+      </mat-form-field>
+
+      <button class="submit" mat-button (click)="submit()">
+        Submit
+      </button>
+    </form>
+
+    <!-- Register / Login switcher -->
+    <div class="mode-switcher" *ngIf="data.mode === 'register'" (click)="switchMode('login')">
+      <span>Already have an account? Login instead</span>
+    </div>
+
+    <div class="mode-switcher" *ngIf="data.mode === 'login'" (click)="switchMode('register')">
+      <span>No account? Register instead</span>
+    </div>
+
+  </section>
+
+</article>

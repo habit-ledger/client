@@ -1,0 +1,26 @@
+.login-view {
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-items, .login-details {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+  }
+
+  .login-items {
+    min-width: 230pt;
+    max-width: 400pt;
+  }
+
+  .mode-switcher {
+    margin-top: 10pt;
+  }
+
+}

@@ -2,7 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
-    "project": "./tsconfig.app.json",
+    "project": "./tsconfig.json",
     "sourceType": "module"
   },
   "plugins": [
@@ -26,6 +26,7 @@
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/unbound-method": "off",
     "semi": "error",
     "no-template-curly-in-string": "error",
     "no-caller": "error",
