@@ -1,4 +1,11 @@
-import { constantKey, constantKeyFn, constantKeyResultSet, EventSet, constantKeyResultSetFn } from './constants';
+import {
+  constantKey,
+  constantKeyFn,
+  constantKeyResultSet,
+  constantKeyResultSetFn,
+  EventSet,
+} from './constants';
+
 import { loremIpsum } from 'lorem-ipsum';
 
 describe('Constants Key Generator', () => {
@@ -19,6 +26,10 @@ describe('Constants Key Generator', () => {
         expect(result).toEqual(`[${key}] ${act}`);
       }
     });
+
+    it('Generates empty actions properly', () => {
+      expect(constantKey('TEST', '')).toEqual('[TEST]');
+    });
   });
 
   describe('#constantKeyFn', () => {
@@ -33,6 +44,8 @@ describe('Constants Key Generator', () => {
         const res = `[${key}] ${act}`;
         expect(fn(act)).toEqual(res);
       }
+
+      expect(fn('')).toEqual(`[${key}]`);
     });
   });
 

@@ -7,7 +7,7 @@ export type EventSet = [ string, string, string ]
  * Generate a new formatted constant in the format "[KEY] ACTION"
  */
 export function constantKey(key: string, act: string): string {
-  return `[${key}] ${act}`;
+  return `[${key}] ${act}`.trim();
 }
 
 /**
