@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 const Modules = [
+  // Material Modules
   MatCardModule,
   MatSliderModule,
   MatFormFieldModule,
@@ -16,10 +17,7 @@ const Modules = [
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    ... Modules,
-  ],
+  imports: [ CommonModule, ... Modules ],
   exports: Modules,
 })
 export class SharedModule { }
