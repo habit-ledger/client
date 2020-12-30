@@ -1,3 +1,11 @@
+/**
+ * This file is responsible for:
+ *  - Registering
+ *  - Toasting register failure
+ *  - Toasting register success
+ *  - Mapping success to a login success
+ */
+
 import * as props from '../account.props';
 import * as AccountActions from '../account.actions';
 
