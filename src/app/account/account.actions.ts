@@ -11,9 +11,8 @@
 import * as constants from './account.constants';
 
 import { props, createAction } from '@ngrx/store';
-import { IRegisterAccount, IAuthSuccess, ILogin } from './account.props';
+import { IRegisterAccount, IAuthSuccess, ILogin, IConfirmAccount } from './account.props';
 import { IAPIException } from '@shared/props';
-import { IConfirmAccount } from './types';
 
 export const register = createAction(constants.Register, props<IRegisterAccount>());
 export const registerSuccess = createAction(constants.RegisterSuccess, props<IAuthSuccess>());

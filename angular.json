@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "HabitLedger"
+  "defaultProject": "HabitLedger",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
