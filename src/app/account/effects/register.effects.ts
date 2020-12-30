@@ -18,6 +18,10 @@ type Result = Success | Failure;
 @Injectable()
 export class RegisterEffects {
 
+  /**
+   * Responds to the "register" action from the Login component, and either transforms that
+   * to a register success or register failure.
+   */
   public onRegister$: Observable<Result> = createEffect(
     () => this.actions$.pipe(
       ofType<Trigger>(AccountActions.register),

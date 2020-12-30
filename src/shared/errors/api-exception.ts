@@ -1,6 +1,11 @@
 import { IAPIException } from '@shared/props';
 import { HttpErrorResponse } from '@angular/common/http';
 
+/**
+ * APIException a simple type with a helper to allow the form of an API Exception (nest style)
+ * to make this instance. This primarily exists for the easy (and safe) conversion of error types,
+ * since sometimes the error is NOT an HTTPErrorResponse
+ */
 export class APIException implements IAPIException {
 
   public error = 'Unknown';
